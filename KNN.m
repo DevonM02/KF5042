@@ -5,7 +5,7 @@ filename = "amazon_reviews.csv";
 dataReviews = readtable(filename,'TextType','string');
 reviews = dataReviews.reviewText;
 sentiment = dataReviews.overall;
-%Data cleaing and pre-processing
+%Data cleaning and pre-processing
 cleanTextData = lower(reviews);
 documents = tokenizedDocument(cleanTextData);
 documents = erasePunctuation(documents);
